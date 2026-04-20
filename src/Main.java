@@ -1,14 +1,26 @@
 
 public class Main {
     public static void main(String[] args) {
-        Vetor v = new Vetor(3);
-        v.inserir(10);
-        v.inserir(12);
-        v.inserir(15);
-        int busca = v.buscaBinaria(5);
-        int busca2 =v.buscar(10);
+        
+        // testando vetor
+        Vetor vetor = new Vetor(3);
 
-        System.out.println(busca);
+        // inserindo os valores
+        vetor.inserir(10);
+        vetor.inserir(20);
+        vetor.inserir(30);
+        vetor.exibir();
+
+        // testando busca
+        System.out.println("Index da busca:" + vetor.buscar(10));
+
+        // removendo
+        vetor.remover(10);
+        vetor.exibir();
+
+        // inserindo numa posicao escolhifa
+        vetor.inserirNaPosicao(1, 50);
+        vetor.exibir();
 
     }
 }
